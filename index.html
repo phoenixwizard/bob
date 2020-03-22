@@ -20,7 +20,7 @@
         #countdown{
             font-family: 'Lato', sans-serif;
             text-align: center;
-            font-size: 5rem;
+            font-size: 4.2rem;
             color: #2f1d75;
             padding: 10px;
         }
@@ -33,15 +33,18 @@
     </div>
     <div id="main" style="display: none;">
     <div id="countdown"></div>
-    <div class="center">
-        <img class="image1" src="singi.jpg" alt="">
-    </div>
+
     <div>
         <div  class="center">
             <img class="image1" src="bob.jpg" alt="">
-            <img class="image1" src="plus.jpg" alt="">
+            <img class="image1" src="plus.jpg" alt="" style="max-height: 27vh;padding-bottom:10vh;">
             <img class="image1" src="cherry.jpg" alt="">
+            <img class="image1" src="equal.png" alt="" style="max-height: 30vh;padding-bottom:8vh;">
         </div>
+    </div>
+
+    <div class="center" style="margin-top: 20px;">
+        <img class="image1" src="singi.jpg" alt="">
     </div>
 </div>
 
@@ -87,10 +90,10 @@ el.addEventListener("click", modifyText, false);
                 var minutes = Math.floor((distance % _hour) / _minute);
                 var seconds = Math.floor((distance % _minute) / _second);
 
-                document.getElementById(id).innerHTML = days + ' Days ';
-                document.getElementById(id).innerHTML += hours + ' Hrs ';
-                document.getElementById(id).innerHTML += minutes + ' Mins ';
-                document.getElementById(id).innerHTML += seconds + ' Secs';
+                document.getElementById(id).innerHTML = days + ' Days <br>';
+                document.getElementById(id).innerHTML += hours + ' Hours <br>';
+                document.getElementById(id).innerHTML += minutes + ' Minutes <br>';
+                document.getElementById(id).innerHTML += seconds + ' Seconds <br>' ;
             }
 
             timer = setInterval(showRemaining, 1000);
